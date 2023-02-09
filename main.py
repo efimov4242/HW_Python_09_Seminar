@@ -1,4 +1,4 @@
-from aiogram import Bot, Dispatcher, executor, types
+from aiogram.utils import executor
 import handlers
 from bot import dp
 
