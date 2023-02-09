@@ -25,6 +25,7 @@ async def bot_turn(message):
 		await view.win(message, 'Бот', take, total_count)
 		await model.set_game()
 
+
 async def player_turn(message: types.Message):
 	game = await model.get_game()
 	if game:
@@ -43,3 +44,4 @@ async def player_turn(message: types.Message):
 		if await model.get_total_count() <= 0:
 			await view.win(message, name, take, total_count)
 			await model.set_game()
+	await bot_turn(message)
